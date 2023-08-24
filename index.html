@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>MazeRunner</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Satisfy', cursive;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, rgba(119, 85, 85, 0.534), rgba(0, 0, 0, 0.1));
+        }
+
+        .section {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .glass-container {
+            width: 600px;
+            background: linear-gradient(135deg, rgba(180, 152, 152, 0.534), rgba(0, 0, 0, 0.1));
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        a {
+            color: #055dff;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="glass-container">
+            <h2>About the Game</h2>
+            <p>Dive into a 2D grid-based world where you control a character navigating through various challenges. The
+                game is built on a tile system, each having distinct properties such as solidity, bounce factor,
+                friction, and gravity effects. These properties dynamically influence the player's movement, offering a
+                unique gameplay experience with each tile interaction.The game provides mechanisms for the player to
+                move left, right, and jump. Moreover, the game's view adjusts based on the player's position, ensuring
+                you always have the best perspective of the action.Rendered on a canvas, this game blends classic 2D
+                gaming with modern design aesthetics. Use the arrow keys to move around and experience the dynamic world
+                tailored by varying tile properties.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container">
+            <h2>The Clarity Engine</h2>
+            <p>The game is powered by the Clarity engine, a custom-built game engine tailored for this 2D adventure. Key
+                features and functions of the Clarity engine include:</p>
+            <h3>Core Functions:</h3>
+            <ul>
+                <li><strong>Clarity()</strong>: The heart of the engine, this function initializes the game's core
+                    elements.</li>
+                <li><strong>error(message)</strong>: Ensures smooth gameplay by handling and logging errors.</li>
+                <li><strong>log(message)</strong>: A utility function for logging messages or events during gameplay.
+                </li>
+                <li><strong>set_viewport(x, y)</strong>: Dynamically sets the game's viewport dimensions for an optimal
+                    viewing experience.</li>
+                <li><strong>load_map(map)</strong>: Transforms game data into a playable map, setting the stage for your
+                    adventure.</li>
+                <li><strong>get_tile(x, y)</strong>: Fetches specific tile properties based on its coordinates,
+                    influencing gameplay dynamics.</li>
+                <li><strong>update_player()</strong>: Continuously updates the player's position and state, based on
+                    interactions and environment.</li>
+            </ul>
+
+            <h3>Properties:</h3>
+            <ul>
+                <li><strong>camera.x & camera.y</strong>: Determines the camera's position, ensuring the player always
+                    remains in focus.</li>
+                <li><strong>tile_size</strong>: Standardizes the size of each tile, creating a uniform game grid.</li>
+                <li><strong>limit_viewport</strong>: Controls whether the viewport is confined to the map boundaries or
+                    can extend beyond.</li>
+                <li><strong>player.loc.x & player.loc.y</strong>: Tracks the player's position, crucial for interactions
+                    and game progress.</li>
+            </ul>
+
+            <h3>Key Aspects:</h3>
+            <p>
+                The game intricately blends various aspects to deliver a captivating gameplay experience:
+            </p>
+            <ul>
+                <li><strong>Map</strong>: A 2D grid that lays out the game's world and challenges.</li>
+                <li><strong>Tile</strong>: The building blocks of the game, each with distinct properties that influence
+                    gameplay.</li>
+                <li><strong>Player</strong>: You, the adventurer, navigating through the game world.</li>
+                <li><strong>Camera & Viewport</strong>: Adjusts the game view based on the player's position, ensuring
+                    an optimal perspective.</li>
+                <li><strong>Gravity</strong>: Affects how the player moves, jumps, and interacts with the environment.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container">
+            <a href="https://akshaygande.github.io/MazeRunner/" target="_blank">Play the Game on GitHub</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
