@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <title>MazeRunner</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&amp;display=swap" rel="stylesheet"/>
+<title>MazeRunner</title>
+<style>
         * {
             margin: 0px;
             padding: 0px;
@@ -59,16 +59,17 @@
             text-align: center;
             display: block;
         }
+        #Note{
+            color: red;
+        }
     </style>
 </head>
-
 <body>
-    <h1>MazeRunner</h1>
-
-    <div class="section">
-        <div class="glass-container">
-            <h2>About the Game</h2>
-            <p>Dive into a 2D grid-based world where you control a character navigating through various challenges. The
+<h1>MazeRunner</h1>
+<div class="section">
+<div class="glass-container">
+<h2>About the Game</h2>
+<p>Dive into a 2D grid-based world where you control a character navigating through various challenges. The
                 game is built on a tile system, each having distinct properties such as solidity, bounce factor,
                 friction, and gravity effects. These properties dynamically influence the player's movement, offering a
                 unique gameplay experience with each tile interaction.The game provides mechanisms for the player to
@@ -76,67 +77,60 @@
                 you always have the best perspective of the action.Rendered on a canvas, this game blends classic 2D
                 gaming with modern design aesthetics. Use the arrow keys to move around and experience the dynamic world
                 tailored by varying tile properties.</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="glass-container">
-            <h2>The Clarity Engine</h2>
-            <p>The game is powered by the Clarity engine, a custom-built game engine tailored for this 2D adventure. Key
+</div>
+</div>
+<div class="section">
+<div class="glass-container">
+<h2>The Clarity Engine</h2>
+<p>The game is powered by the Clarity engine, a custom-built game engine tailored for this 2D adventure. Key
                 features and functions of the Clarity engine include:</p>
-            <h3>Core Functions:</h3>
-            <ul>
-                <li><strong>Clarity()</strong>: The heart of the engine, this function initializes the game's core
+<h3>Core Functions:</h3>
+<ul>
+<li><strong>Clarity()</strong>: The heart of the engine, this function initializes the game's core
                     elements.</li>
-                <li><strong>error(message)</strong>: Ensures smooth gameplay by handling and logging errors.</li>
-                <li><strong>log(message)</strong>: A utility function for logging messages or events during gameplay.
+<li><strong>error(message)</strong>: Ensures smooth gameplay by handling and logging errors.</li>
+<li><strong>log(message)</strong>: A utility function for logging messages or events during gameplay.
                 </li>
-                <li><strong>set_viewport(x, y)</strong>: Dynamically sets the game's viewport dimensions for an optimal
+<li><strong>set_viewport(x, y)</strong>: Dynamically sets the game's viewport dimensions for an optimal
                     viewing experience.</li>
-                <li><strong>load_map(map)</strong>: Transforms game data into a playable map, setting the stage for your
+<li><strong>load_map(map)</strong>: Transforms game data into a playable map, setting the stage for your
                     adventure.</li>
-                <li><strong>get_tile(x, y)</strong>: Fetches specific tile properties based on its coordinates,
+<li><strong>get_tile(x, y)</strong>: Fetches specific tile properties based on its coordinates,
                     influencing gameplay dynamics.</li>
-                <li><strong>update_player()</strong>: Continuously updates the player's position and state, based on
+<li><strong>update_player()</strong>: Continuously updates the player's position and state, based on
                     interactions and environment.</li>
-            </ul>
-
-            <h3>Properties:</h3>
-            <ul>
-                <li><strong>camera.x & camera.y</strong>: Determines the camera's position, ensuring the player always
+</ul>
+<h3>Properties:</h3>
+<ul>
+<li><strong>camera.x &amp; camera.y</strong>: Determines the camera's position, ensuring the player always
                     remains in focus.</li>
-                <li><strong>tile_size</strong>: Standardizes the size of each tile, creating a uniform game grid.</li>
-                <li><strong>limit_viewport</strong>: Controls whether the viewport is confined to the map boundaries or
+<li><strong>tile_size</strong>: Standardizes the size of each tile, creating a uniform game grid.</li>
+<li><strong>limit_viewport</strong>: Controls whether the viewport is confined to the map boundaries or
                     can extend beyond.</li>
-                <li><strong>player.loc.x & player.loc.y</strong>: Tracks the player's position, crucial for interactions
+<li><strong>player.loc.x &amp; player.loc.y</strong>: Tracks the player's position, crucial for interactions
                     and game progress.</li>
-            </ul>
-
-            <h3>Key Aspects:</h3>
-            <p>
+</ul>
+<h3>Key Aspects:</h3>
+<p>
                 The game intricately blends various aspects to deliver a captivating gameplay experience:
             </p>
-            <ul>
-                <li><strong>Map</strong>: A 2D grid that lays out the game's world and challenges.</li>
-                <li><strong>Tile</strong>: The building blocks of the game, each with distinct properties that influence
+<ul>
+<li><strong>Map</strong>: A 2D grid that lays out the game's world and challenges.</li>
+<li><strong>Tile</strong>: The building blocks of the game, each with distinct properties that influence
                     gameplay.</li>
-                <li><strong>Player</strong>: You, the adventurer, navigating through the game world.</li>
-                <li><strong>Camera & Viewport</strong>: Adjusts the game view based on the player's position, ensuring
+<li><strong>Player</strong>: You, the adventurer, navigating through the game world.</li>
+<li><strong>Camera &amp; Viewport</strong>: Adjusts the game view based on the player's position, ensuring
                     an optimal perspective.</li>
-                <li><strong>Gravity</strong>: Affects how the player moves, jumps, and interacts with the environment.
+<li><strong>Gravity</strong>: Affects how the player moves, jumps, and interacts with the environment.
                 </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="glass-container">
-            <a href="https://akshaygande.github.io/MazeRunner/" target="_blank">Play the Game on GitHub</a>
-            <a href="app-release.apk" download>Download the Android App (APK)</a>
-
-        </div>
-    </div>
-
+</ul>
+</div>
+</div>
+<div class="section">
+<div class="glass-container">
+<a href="https://akshaygande.github.io/MazeRunner/" target="_blank">Play the Game on GitHub</a>
+<a download="" href="app-release.apk">Download the Android App (APK)</a><p id="Note">Note: After downloading, please open the app in landscape mode for the best experience.</p>
+</div>
+</div>
 </body>
-
 </html>
